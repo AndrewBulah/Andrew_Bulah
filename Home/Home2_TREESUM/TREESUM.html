@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    'use strict'
+    const treesum = arr => arr.flat(Infinity).reduce((sum, el) => sum + parseFloat(el), 0);
+
+    /*решение при помощи рекурсии*/
+    let count = 0;
+    function treesumTwo(arr){
+        for (let elem of arr) {
+            if(typeof elem === 'number'){
+                count += elem;
+            }
+            else{
+                treesumTwo(elem);
+            }
+        }
+        return count;
+    }
+
+    alert('Вызовите в консоле функцию treesum(arr) с массивом в аргументе');
+
+</script>
+</body>
+</html>
