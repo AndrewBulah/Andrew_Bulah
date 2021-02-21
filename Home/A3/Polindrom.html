@@ -8,28 +8,18 @@
 <script>
 
     'use strict'
-    // let inputStr = 'ьъеMadam, I\'m Adam!ё'
-    let inputStr = prompt('Введите строку:');
-
-    function reverseString(str, newStr = "") {
-        str = str.toUpperCase().replace(/[\s.\-ьъ!?',:%\.]/gi, '').replace(/ё/gi, "Е");
-
-        for (let i = str.length - 1; i >= 0; i--) {
-            newStr += str[i];
+    function palindrome(str) {
+        str = str.toLowerCase().replace(/[\s.\-ьъ!?',:%\.]/gi, '').replace(/ё/gi, "е");
+        for (var i = 0, j = str.length - 1; i < j; i++, j--) {
+            if(str[i] != str[j])
+                return false;
         }
-
-        let polindrom = (str === newStr ? "полиндром" : "не полиндром");
-
-        if (str === "" || str === " ") {
-            alert(`Строка: \"${inputStr}\" не полиндром!`);
-
-        } else {
-            alert(`    Строка ${inputStr}
-    ${str} = ${newStr}
-    ${polindrom}!`);
-        }
+        return true;
     }
-    reverseString(inputStr);
+
+    let str = prompt('Введите строку:');
+
+    alert(palindrome(str));
 
 </script>
 </body>
