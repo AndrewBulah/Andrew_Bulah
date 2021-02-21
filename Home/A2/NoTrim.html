@@ -6,11 +6,16 @@
 </head>
 <body>
 <script>
+    'use strict'
     let name = prompt(' введите сообщение с любым количеством пробелом ' );
     while (name[0] == ' ')
     name = name.substring(1,name.length);
-    alert(name);
-    console.log('! + name + !');
-</script>
+
+    function del(string){
+        let NoSpace = string.split(" ").filter(word => word.length > 0).join(" ");
+        alert(`Ваша строка: \"${NoSpace}\"`);
+    }
+         del(name);
+ </script>
 </body>
 </html>
