@@ -6,32 +6,41 @@
 </head>
 <body>
     <script>
-
         'use strict'
-        // let inputStr = 'ьъеMadam, I\'m Adam!ё'
-        let inputStr = prompt('Введите строку:');
-
-        function reverseString(str, newStr = "") {
-            str = str.toUpperCase().replace(/[\s.\-ьъ!?',:%\.]/gi, '').replace(/ё/gi, "Е");
-
-            let reverseStr = (str) => str === "" ? "" : newStr = reverseStr(str.substr(1)) + str.charAt(0)
-
-            reverseStr(str)
-
-            let polindrom = (str === newStr ? "полиндром" : "не полиндром");
-
-            if (str === "" || str === " ") {
-                alert(`Строка: \"${inputStr}\" не полиндром!`);
+        function isInputCorrect(strForChecking) {
+            if(!strForChecking || !strForChecking.trim()) {
+                return false;
             }
-
-            else {
-                alert(`    Строка ${inputStr}
-    ${str} = ${newStr}
-    ${polindrom}!`);
+            return true;
+        }
+        function removeSpaces(str) {
+            return str.replace(/\s+/g, '');
+        }
+        function checkStringForPalindrome(strToCheck, currentIndexFromStart, currentIndexFromEnd) {
+            // можно сделать и лучше, но для простоты пока так
+            if(strToCheck.length === 1) {
+                return true;
+            }
+            let isCoinciding = strToCheck[currentIndexFromStart].toLowerCase() === strToCheck[currentIndexFromEnd].toLowerCase();
+            if(
+                isCoinciding
+                && currentIndexFromStart < inputStr.length-1
+                && currentIndexFromEnd > 0
+            ) {
+                return checkStringForPalindrome(strToCheck, currentIndexFromStart + 1, currentIndexFromEnd - 1);
+            } else {
+                return isCoinciding;
             }
         }
-        reverseString(inputStr);
-
+        const inputStr = prompt('Введите строку: ');
+        let isCorrect = isInputCorrect(inputStr);
+        if(isCorrect) {
+            const stringWithoutSpaces = removeSpaces(inputStr);
+            const isPalindrome = checkStringForPalindrome(stringWithoutSpaces, 0, stringWithoutSpaces.length-1);
+            alert(`Строка "${inputStr}": ${(isPalindrome) ? '': 'не'} полиндром!`);
+        } else {
+            alert("Некорректный ввод!");
+        }
     </script>
 </body>
 </html>
