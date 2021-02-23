@@ -8,23 +8,21 @@
 <script>
 
     'use strict'
-    const treesum = arr => arr.flat(Infinity).reduce((sum, el) => sum + parseFloat(el), 0);
 
-    /*решение при помощи рекурсии*/
     let count = 0;
-    function treesumTwo(arr){
-        for (let elem of arr) {
-            if(typeof elem === 'number'){
-                count += elem;
+    function treesum(arr){
+        for (let el of arr) {
+            if(typeof el === 'number'){
+                count += el;
             }
             else{
-                treesumTwo(elem);
+                treesum(el);
             }
         }
         return count;
     }
 
-    alert('Вызовите в консоле функцию treesum(arr) с массивом в аргументе');
+    console.log('treesum([ввести массив])');
 
 </script>
 </body>
