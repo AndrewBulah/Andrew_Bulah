@@ -10,7 +10,7 @@
     'use strict'
     function palindrome(str) {
         str = str.toLowerCase().replace(/[\s.\-ьъ!?',:%\.]/gi, '').replace(/ё/gi, "е");
-        for (var i = 0, j = str.length - 1; i < j; i++, j--) {
+            for (var i = 0, j = str.length - 1; i < j; i++, j--) {
             if(str[i] != str[j])
                 return false;
         }

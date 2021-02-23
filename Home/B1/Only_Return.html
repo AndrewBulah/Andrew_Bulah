@@ -9,9 +9,11 @@
 
     let year = prompt('Введите год');
 
-    const convert = y => Math.floor(y / 100) + 1;
+    function FromYear(year) {
+        return Math.floor((year-1)/100) + 1;
+    }
 
-    alert(`${year} год - это ${convert(year)} век`)
+    alert(`${year} год =  ${FromYear(year)} век`)
 
 </script>
 </body>

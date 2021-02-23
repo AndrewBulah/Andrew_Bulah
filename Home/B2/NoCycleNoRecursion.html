@@ -8,8 +8,11 @@
 <script>
 
     let str = prompt('Введите строку');
-    const reverseStr = str => str.split("").reverse().join("");
-    alert(` Ваша строка: ${reverseStr(str)}`)
+    const rev = (str) => {
+        return str.split('').reverse().join('')
+    };
+
+    alert(` Ваша строка: ${rev(str)}`)
 
 </script>
 </body>
