@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    "use strict"
+    function words() {
+        let text = prompt('Введите текст', '').toLowerCase().split('');
+        let numberChar = text.length;
+        let count = 0;
+        const vowels = ['у', 'е', 'ы', 'а', 'о', 'э', 'я', 'и', 'a', 'e', 'i', 'o', 'u'];
+
+        for (let i = 0; i < numberChar; i++) {
+            if (vowels.includes(text[i])) {
+                count++;
+            }
+        }
+        console.log(count);
+    }
+    words();
+
+</script>
+</body>
+</html>
