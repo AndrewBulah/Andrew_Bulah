@@ -14,7 +14,7 @@
             return true;
         }
         function removeSpaces(str) {
-            return str.replace(/\s+/g, '');
+            return str.replace(/[\s.\-ьъ!?',:%\.]/g, '');
         }
         function checkStringForPalindrome(strToCheck, currentIndexFromStart, currentIndexFromEnd) {
             if(strToCheck.length === 1) {
@@ -39,6 +39,9 @@
             alert(`Строка "${inputStr}": ${(isPalindrome) ? '': 'не'} полиндром!`);
         } else {
             alert("Некорректный ввод!");
+
+
+
         }
     </script>
 </body>
