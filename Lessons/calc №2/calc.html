@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        input{
+            width: 25px;
+            height: 25px;
+        }
+    </style>
+</head>
+<body>
+<div id="result"></div>
+
+<input type="button" value="1" onclick="getNumber(1)">
+<input type="button" value="2" onclick="getNumber(2)">
+<input type="button" value="3" onclick="getNumber(3)"> <br>
+<input type="button" value="4" onclick="getNumber(4)">
+<input type="button" value="5" onclick="getNumber(5)">
+<input type="button" value="6" onclick="getNumber(6)"> <br>
+<input type="button" value="7" onclick="getNumber(7)">
+<input type="button" value="8" onclick="getNumber(8)">
+<input type="button" value="9" onclick="getNumber(9)"> <br>
+<input type="button" value="0" onclick="getNumber(0)">
+<input type="button" value="+" onclick="getOperation(+)">
+<input type="button" value="-" onclick="getOperation(-)"> <br>
+<input type="button" value="*" onclick="getOperation(*)">
+<input type="button" value="/" onclick="getOperation(/)">
+<input type="button" value="=" onclick="result()">
+
+<script>
+    let x = null,   y = null, operVariable = "";
+    function getNumber(num) {
+        if (x === null){
+            x = num;
+        } else{
+            y = num;
+        }
+    }
+    function getOperation(oper) {
+        operVariable = oper;
+        }
+    function  result() {
+        let EL = document.getElementById('result');
+
+        switch (operVariable) {
+            case "+":
+                EL.innerText =  x+y;
+                break;
+            case "-":
+                EL.innerText =  (x-y).toString();
+                break;
+            case "*":
+                EL.innerText =  (x*y).toString();
+                break;
+            case "/":
+                EL.innerText =  (x/y).toString();
+                break;
+        }
+
+    }
+
+</script>
+</body>
+</html>

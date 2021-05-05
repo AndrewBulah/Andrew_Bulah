@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function battle(fighters){
+        if(fighters[0] <= 0 && fighters[1] <= 0){
+            console.log(`Both fighters must be alive`);
+            return;
+        }
+
+        var fighterIndex = 0;
+        var damage;
+        while(fighters[fighterIndex] <= 0){
+            damage = getDamage();
+            console.log(`Fighter # ${fighterIndex} Inflicted ${damage} points of damage`);
+            fighterIndex = 1 - fighterIndex;
+            fighters[fighterIndex] - fighters[fighterIndex] - damage;
+        }
+    }
+</script>
+</body>
+</html>
