@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    'use strict'
+
+    let str =prompt("Ввести строку", 'ааааааааааа');
+    function countVowels (str) {
+        let letter = str.toLowerCase().split('');
+        let vowels="аеёиоуыэюя";
+
+        let  arr =  letter.reduce( (sum, val) => {
+            if (vowels.indexOf (val) !==-1) {
+                sum++;
+            }
+            return sum;
+        }, 0);
+        return arr;
+    }
+
+    console.log("В строке " + "'" + str + "'" + " - " + countVowels(str) + " русских гласных букв");
+</script>
+</body>
+</html>
