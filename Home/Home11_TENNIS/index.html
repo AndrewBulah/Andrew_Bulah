@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="container">
+    <button type="button" id="button1" onclick="start()">Старт</button>
+    <div id="field">
+        <div id="ball"></div>
+        <div id="racket-left"></div>
+        <div id="racket-right"></div>
+
+        <table id="results-table">
+            <tr>
+                <td><span id="left-wins">0</span></td>
+                <td><span>:</span></td>
+                <td><span id="right-wins">0</span></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<script src="tennis_dom.js"></script>
+</body>
+</html>

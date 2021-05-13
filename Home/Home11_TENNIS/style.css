@@ -1,0 +1,50 @@
+#field {
+    position: relative;
+    border: solid rgb(29, 29, 29) 2px;
+    background-color: #dbdbd1;
+    margin: 20px;
+}
+#ball {
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    background-color: #0c0c0c;
+    margin: 0;
+    padding: 0;
+}
+#racket-left {
+    position: absolute;
+    background-color: #25a725;
+    margin: 0;
+    padding: 0;
+}
+#racket-right {
+    position: absolute;
+    background-color: #f80707;
+    margin: 0;
+    padding: 0;
+}
+#button1 {
+    background-color: #7ac9ec;
+    border-color:  rgb(121, 184, 223);
+    border-radius: 0%;
+    width: 100px;
+    height: 30px;
+    margin: 20px 0px 0px 20px;
+    font-size: 20px;
+}
+#results-table {
+    position: absolute;
+    margin: auto;
+    left: 50%;
+    margin-left: -49px;
+    top: -61px;
+    font-size: 40px;
+    padding: 0;
+    text-align: center;
+}
+#results-table td {
+    width: 30px;
+    padding: 0;
+    border-spacing: 2px;
+}
