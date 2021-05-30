@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+    <TITLE>Игра</TITLE>
+    <LINK rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+</HEAD>
+<BODY>
+<div id="container">
+    <div id="world"></div>
+    <div id="pawn"></div>
+    <div class = "widget" id = "widget1"></div>
+    <div class = "widget" id = "widget2"></div>
+    <div class = "widget" id = "widget3"></div>
+    <div class = "menu" id = "menu1" style = "display:block;">
+        <div id="button1" class="button">
+            <p>Начать игру</p>
+        </div>
+        <div id="button2" class="button">
+            <p>Инструкция</p>
+        </div>
+    </div>
+    <div class = "menu" id = "menu2">
+        <p style="font-size:30px; top:200px">
+            <strong>Управление:</strong> <br>
+            w - вперед <br>
+            s - вверх <br>
+            d - вправо <br>
+            a - влево <br>
+            <strong>Задача:</strong> <br>
+            Взять красный квадрат и найти голубой квадрат
+        </p>
+        <div id="button3" class="button">
+            <p>Назад</p>
+        </div>
+    </div>
+    <div class = "menu" id = "menu3">
+        <p id = "result" style="top:100px"></p>
+        <div id="button4" class="button">
+            <p>Вернуться назад</p>
+        </div>
+    </div>
+</div>
+</BODY>
+</HTML>
+<script src="script.js"></script>
+<script src="menu.js"></script>

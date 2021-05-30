@@ -1,0 +1,130 @@
+body{
+    margin:0px;
+}
+
+#container{
+    position:absolute;
+    width:1200px;
+    height:800px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    border:2px solid #000000;
+    perspective:600px;
+    overflow:hidden;
+    background-color:#C0FFFF;
+}
+#world{
+    position:absolute;
+    width:inherit;
+    height:inherit;
+    transform-style:preserve-3d;
+}
+#pawn{
+    display:none;
+    position:absolute;
+    top:400px;
+    left:600px;
+    transform:translate(-50%,-50%);
+    width:100px;
+    height:100px;
+}
+.square{
+    position:absolute;
+}
+
+/* Оформление меню */
+
+.menu{
+    display:none;
+    position:absolute;
+    width:inherit;
+    height:inherit;
+    background-color:#C0FFFF;
+}
+.button{
+    margin:0px;
+    position:absolute;
+    width:900px;
+    height:250px;
+    background-color:#FFF;
+    cursor:pointer;
+}
+.button:hover{
+    background-color:#DDD;
+}
+#button1{
+    top:100px;
+    left:150px;
+}
+#button2{
+    top:450px;
+    left:150px;
+}
+#button3{
+    top:450px;
+    left:150px;
+}
+#button4{
+    top:450px;
+    left:150px;
+}
+
+/* Оформление предметов */
+
+.thing{
+    box-shadow: 0 0 10px #FFFF00;
+}
+.key{
+    box-shadow: 0 0 10px #FF0000;
+}
+.finish{
+    box-shadow: 0 0 10px #00FFFF;
+}
+
+/* Оформление виджетов */
+
+.widget{
+    display:none;
+    position:absolute;
+    background-color:#FFF;
+    opacity:0.8;
+    z-index:300;
+}
+#widget1{
+    top:0px;
+    left:0px;
+    width:300px;
+    height:100px;
+}
+#widget2{
+    top:0px;
+    right:0px;
+    width:300px;
+    height:100px;
+}
+#widget3{
+    bottom:0px;
+    left:0px;
+    width:500px;
+    height:200px;
+}
+
+/* Оформление текста */
+
+p{
+    margin:0px;
+    font-size:60px;
+    position:absolute;
+    display:block;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    user-select:none;
+    font-family:fontlab;
+}
+
+@font-face{
+    font-family:fontlab;
+    src:url("Fonts/font1.woff");
+}
