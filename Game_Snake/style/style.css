@@ -4,7 +4,6 @@ body{
 	background-size: cover;
 	background-position: center center;
 	background-attachment: fixed;
-
 }
 
 h1 {
@@ -37,20 +36,20 @@ h1 {
 	margin-left: auto;
 	margin-right: auto;
 	position: absolute;
-	top: 0px;
+	top: 0;
 	width: 1000px; 
 	height: 404px;
 	box-sizing: content-box;
 	display: block;
 }
 #game_field {
-	background: url(../img/squares.svg);
+	background-image: url(../img/squares.svg);
 	background-repeat: no-repeat;
 	position: absolute;
 	width: 696px;
 	height: 480px;
 	display: block;
-	padding: 0px;
+	padding: 0;
 	z-index: 10;
 	left: calc(50% - 352px);
 	top: calc((404px - 476px) / 2);
@@ -60,7 +59,6 @@ h1 {
 .score_container {
 	font-family: sans-serif ;
 	font-size: 30px;
-	color: rgb(70, 70, 70);
 	display: block;
 	color: floralwhite;
 }
@@ -229,7 +227,7 @@ h1 {
 	color: black;
 	box-sizing: border-box;
 	width: 480px;
-	height: 0px;
+	height: 0;
 	position: absolute;
 	top: 620px;
 	left: calc(50% - 220px);
@@ -318,13 +316,13 @@ h1 {
 	text-align: center;
 }
 
-@media screen and (orientation: portrait), screen and (max-width: 1000px) {
+@media screen and (orientation: portrait), screen and (max-width: 1023px) {
 
 	canvas#background_controller {
 		display: none;
 	}
 	.global_container .game_container {
-		width: 490px;
+		width: 478px;
 		top: 100px;
 		height: 500px;
 	}
@@ -336,12 +334,32 @@ h1 {
 		display: block;
 	}
 	div#rules {
-		top: 69px;
-		left: 23%;
+		top: 20px;
+		left: 25%;
+		width: 380px;
+	}
+	#rules{
+		width: 380px;
+		font-size: 17px;
+	}
+	h1{
+		width: 200px;
 	}
 }
 
-@media screen and (orientation: portrait), screen and (max-width: 800px) {
+@media screen and (orientation: portrait), screen and (max-width: 933px){
+	#game_field{
+		transform: scale(1.2);
+		left: calc(50% - 349px);
+		top: calc((404px - 450px) / 2);
+	}
+}
+
+@media screen and (orientation: portrait), screen and (max-width: 900px) {
+	body{
+		margin: 0 auto;
+		padding: 0;
+	}
 	.global_container{
 		height: 300px;
 	}
@@ -349,49 +367,439 @@ h1 {
 	display: none;
 	}
 	#game_field{
-		left: calc(50% - 348px);
-		top: calc((404px - 450px) / 2);
-		transform: scale(1.3);
+		left: calc(50% - 343px);
+		top: calc((404px - 431px) / 2);
+		transform: scale(1.25);
 	}
 	.score_container>#score_img{
-		left: calc(50% - 457px);
-		top: 588px;
+		left: calc(50% + 335px);
+		top: 628px;
+		transform: scale(2);
 	}
 	.score_container>#score_value{
-		top: 608px;
-		left: calc(50% - 400px);
+		top: 649px;
+		left: calc(50% + 286px);
+		transform: scale(2);
 	}
 	#dir-butt-mobile{
-		top: 560px;
-		left: calc(50% - 89px);
+		top: 735px;
+		left: calc(50% - 53px);
+		transform: scale(2);
 	}
 	#butt_start{
-		top: 745px;
-		right: calc(50% - -270px);
-		transform: scale(1.5);
+		top: 615px;
+		right: calc(50% + 286px);
+		transform: scale(2);
 	}
 	#butt_rules{
-		left: calc(50% + 240px);
-		top: 750px;
-		transform: scale(1.5);
+		left: calc(50% - 377px);
+		top: 775px;
+		transform: scale(2);
 	}
 	#label_save{
-		top: -100px;
+		transform: scale(2);
+		top: -91px;
 	}
 	#user_name{
-		top: 70px;
+		transform: scale(2);
+		top: 220px;
 	}
 	#butt_save_record{
-		top: 125px;
+		top: 325px;
+		transform: scale(2);
 	}
 	#butt-all-records{
-		top: 185px;
+		transform: scale(2);
+		top: 435px;
 	}
 	#records-table{
-		top: calc((404px - 502px) / 2);
+		transform: scale(1.5);
+		top: calc((404px - 262px) / 2);
+	}
+	div#rules{
+		top: 100px;
+		transform: scale(1.3);
+	}
+	#rules{
+		width: 350px;
+		height: 700px;
+	}
+	div#rules{
+		top: 296px;
+		transform: scale(2);
+		left: 32%;
 	}
 }
 
+@media all and (max-width: 899px) {
+	#game_field{
+		transform: scale(1.0);
+		top: calc((404px - 604px) / 2);
+	}
+	.score_container>#score_value{
+		top: 432px;
+		left: calc(50% + 254px);
+		transform: scale(1.3);
+	}
+	.score_container>#score_img{
+		transform: scale(1.3);
+		left: calc(50% + 293px);
+		top: 410px;
+	}
+	#butt_start{
+		top: 414px;
+		right: calc(50% + 228px);
+		transform: scale(1.3);
+	}
+	#butt_rules{
+		top: 502px;
+		left: calc(50% - 324px);
+		transform: scale(1.3);
+	}
+	#dir-butt-mobile{
+		top: 455px;
+		transform: scale(1.5);
+	}
+}
+
+@media all and (max-width: 850px) {
+	.global_container{
+		width: 90%;
+	}
+	#game_field {
+		left: calc(50% - 303px);
+	}
+	.score_container>#score_img{
+		transform: scale(1.2);
+		top: 403px;
+		left: calc(50% + 303px)
+	}
+	.score_container>#score_value{
+		transform: scale(1.2);
+		top: 424px;
+		left: calc(50% + 270px);
+	}
+	#butt_start {
+		right: calc(50% + 188px);
+	}
+	#butt_rules {
+		right: calc(50% + 128px);
+	}
+	#dir-butt-mobile{
+		transform: scale(1.3);
+		left: calc(50% - 3px);
+		top: 442px;
+	}
+	div#rules {
+		top: 70px;
+		transform: scale(1.2);
+		left: 32%;
+	}
+	#label_save {
+		transform: scale(1.1);
+		left: 106px;
+	}
+	#user_name {
+		transform: scale(1.1);
+		top: 100px;
+		left: 210px;
+	}
+	#butt_save_record {
+		left: 250px;
+		top: 165px;
+		transform: scale(1.1);
+	}
+	#butt-all-records {
+		transform: scale(1.1);
+		top: 225px;
+		left: 250px;
+	}
+	#records-table {
+		transform: scale(1.1);
+		top: calc((404px - 432px) / 2);
+		left: 60px;
+	}
+}
+
+@media all and (max-width: 825px){
+	#game_field{
+		transform: scale(0.9);
+		top: calc((404px - 650px) / 2);
+	}
+	#butt_start{
+		right: calc(50% + 150px);
+		top: 415px;
+	}
+	.score_container>#score_value{
+		left: calc(50% + 255px);
+		top: 367px;
+		font-size: 40px;
+	}
+	.score_container>#score_img{
+		top: 354px;
+		left: calc(50% + 293px);
+		transform: scale(1);
+	}
+	#butt_rules{
+		top: 499px;
+		left: calc(50% - 248px);
+	}
+	#dir-butt-mobile{
+		top: 390px;
+		left: calc(50% - 13px);
+		transform: scale(1.2);
+	}
+}
+
+@media all and (max-width: 670px) {
+	#game_field{
+		transform: scale(0.8);
+	}
+	#dir-butt-mobile {
+		transform: scale(1);
+		top: 326px;
+	}
+	#butt_start {
+		transform: scale(1);
+		top: 345px;
+		right: calc(50% + 120px);
+	}
+	#butt_rules {
+		transform: scale(1);
+		top: 410px;
+		left: calc(50% - 218px);
+	}
+	.score_container>#score_value {
+		left: calc(50% + 235px);
+		top: 337px;
+		font-size: 27px;
+	}
+	.score_container>#score_img {
+		transform: scale(0.8);
+		top: 318px;
+		left: calc(50% + 253px);
+	}
+	div#rules {
+		transform: scale(1);
+		top: 30px;
+		left: 32%;
+	}
+	#label_save {
+		transform: scale(0.9);
+	}
+	#user_name {
+		transform: scale(1);
+		top: 70px;
+		left: 210px;
+	}
+	#butt_save_record {
+		transform: scale(1);
+		top: 125px;
+	}
+	#butt-all-records {
+		transform: scale(1);
+		top: 177px;
+		left: 251px;
+	}
+	#records-table {
+		transform: scale(1);
+		top: calc((404px - 504px) / 2);
+		left: 50px;
+	}
+}
+
+@media all and (max-width: 610px) {
+	#game_field{
+		transform: scale(0.75);
+		top: calc((404px - 690px) / 2);
+		left: calc(50% - 317px);
+	}
+	#butt_start{
+		top: 305px;
+		right: calc(50% + 140px);
+		transform: scale(1);
+	}
+	#butt_rules{
+		transform: scale(1);
+		top: 370px;
+		left: calc(50% - 238px);
+	}
+	#dir-butt-mobile{
+		transform: scale(1.0);
+		top: 310px;
+		left: calc(50% - 43px);
+	}
+	.score_container>#score_value{
+		left: calc(50% + 210px);
+		top: 345px
+	}
+	.score_container>#score_img{
+		top: 287px;
+		left: calc(50% + 187px);
+	}
+	div#rules{
+		transform: scale(0.9);
+		top: 0;
+		left: 19%;
+		font-size: 19px;
+	}
+	#records-table{
+		top: calc((404px - 592px) / 2);
+	}
+}
+
+@media all and (max-width: 560px) {
+	#game_field{
+		transform: scale(0.7);
+		top: calc((404px - 743px) / 2);
+		left: calc(50% - 317px);
+	}
+	#butt_start{
+		top: 265px;
+		right: calc(50% + 110px);
+	}
+	#butt_rules{
+		top: 320px;
+		left: calc(50% - 208px);
+	}
+	.score_container>#score_img{
+		display: none;
+	}
+	.score_container>#score_value{
+		left: calc(50% + 230px);
+		top: 258px;
+	}
+	div#rules{
+		top: -20px;
+	}
+	#label_save{
+		left: 93px;
+		top: -91px;
+	}
+	#user_name{
+		top: 50px;
+		left: 193px;
+	}
+	#butt_save_record{
+		top: 99px;
+		left: 234px;
+	}
+	#butt-all-records{
+		top: 147px;
+		left: 235px;
+	}
+	#records-table{
+		transform: scale(0.8);
+	}
+}
+
+@media all and (max-width: 540px) {
+	#game_field{
+		transform: scale(0.6);
+		top: calc((404px - 793px) / 2);
+		left: calc(50% - 337px);
+	}
+	#butt_start{
+		top: 205px;
+		right: calc(50% + 100px);
+	}
+	#butt_rules{
+		top: 260px;
+		left: calc(50% - 198px);
+	}
+	.score_container>#score_value{
+		left: calc(50% + 192px);
+		top: 208px;
+	}
+	#dir-butt-mobile{
+		transform: scale(0.9);
+		top: 217px;
+		left: calc(50% - 43px);
+	}
+	#label_save{
+		transform: scale(0.8);
+		top: -100px;
+		left: 60px;
+	}
+	#user_name{
+		transform: scale(0.8);
+		top: 30px;
+		left: 161px;
+	}
+	#butt_save_record{
+		transform: scale(0.8);
+		top: 69px;
+		left: 203px;
+	}
+	#butt-all-records{
+		transform: scale(0.8);
+		top: 117px;
+		left: 205px;
+	}
+	#records-table{
+		transform: scale(0.7);
+		left: 10px;
+		top: calc((404px - 658px) / 2);
+	}
+}
+
+@media all and (max-width: 510px) {
+	#game_field{
+		transform: scale(0.63);
+		top: calc((404px - 773px) / 2);
+		left: calc(50% - 347px);
+	}
+	#butt_start{
+		top: 225px;
+		right: calc(50% + 129px);
+		transform: scale(0.8);
+	}
+	#butt_rules{
+		top: 270px;
+		left: calc(50% - 228px);
+		transform: scale(0.8);
+	}
+	#dir-butt-mobile{
+		transform: scale(0.75);
+		top: 200px;
+		left: calc(50% - 73px);
+	}
+	.score_container>#score_value{
+		font-size: 20px;
+		left: calc(50% + 172px);
+		top: 227px;
+	}
+	div#rules{
+		top: -50px;
+		left: 11%;
+		transform: scale(0.75);
+	}
+	#label_save{
+		transform: scale(0.7);
+		left: 30px;
+	}
+	#user_name{
+		top: 20px;
+		left: 131px
+	}
+	#butt_save_record{
+		transform: scale(0.7);
+		top: 59px;
+		left: 172px;
+	}
+	#butt-all-records{
+		transform: scale(0.7);
+		top: 97px;
+		left: 172px;
+	}
+	#records-table{
+		transform: scale(0.65);
+		left: 0;
+		top: calc((404px - 631px) / 2);
+	}
+
+}
+/*
 @media screen and (orientation: portrait), screen and (max-width: 600px) {
 	.score_container>#score_img{
 		display: block;
@@ -407,7 +815,7 @@ h1 {
 		transform: scale(1.5);
 	}
 }
-/*
+
 @media screen and (orientation: portrait), screen and (max-width: 550px){
 	#game_field{
 		transform: scale(0.8);
